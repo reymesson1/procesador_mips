@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Aug  5 20:12:03 2020
+# Process ID: 1600
+# Current directory: C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.runs/synth_1
+# Command line: vivado.exe -log mips.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mips.tcl
+# Log file: C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.runs/synth_1/mips.vds
+# Journal file: C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mips.tcl -notrace
+Command: synth_design -top mips -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9032 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 361.863 ; gain = 101.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mips' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/mips.v:23]
+INFO: [Synth 8-6157] synthesizing module 'control' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/control.v:23]
+	Parameter FETCH bound to: 4'b0000 
+	Parameter DECODE bound to: 4'b0001 
+	Parameter MEMADRCOMP bound to: 4'b0010 
+	Parameter MEMACCESSL bound to: 4'b0011 
+	Parameter MEMREADEND bound to: 4'b0100 
+	Parameter MEMACCESSS bound to: 4'b0101 
+	Parameter EXECUTION bound to: 4'b0110 
+	Parameter RTYPEEND bound to: 4'b0111 
+	Parameter BEQ bound to: 4'b1000 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/control.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'control' (1#1) [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'alucontrol' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/alucontrol.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/alucontrol.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'alucontrol' (2#1) [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/alucontrol.v:23]
+INFO: [Synth 8-6157] synthesizing module 'datapath' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/datapath.v:23]
+	Parameter PCSTART bound to: 128 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'memory_file.mem' is read successfully [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/datapath.v:76]
+ERROR: [Synth 8-524] part-select [31:26] out of range of prefix 'Instruction' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/datapath.v:70]
+ERROR: [Synth 8-6156] failed synthesizing module 'datapath' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/datapath.v:23]
+ERROR: [Synth 8-6156] failed synthesizing module 'mips' [C:/Users/Rey Messon/Desktop/procesador_mips/project_9/project_9.srcs/sources_1/new/mips.v:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.996 ; gain = 157.539
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  5 20:12:17 2020...

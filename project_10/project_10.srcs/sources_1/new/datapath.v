@@ -1,7 +1,29 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 06.08.2020 20:11:57
+// Design Name: 
+// Module Name: datapath
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
 module datapath(clk, reset, IorD, MemRead, MemWrite, MemtoReg, IRWrite,
 PCSource, ALUSrcB, ALUSrcA, RegWrite, RegDst, PCSel, ALUCtrl, Op, Zero, Function);
 
-	parameter PCSTART = 128; //starting address of instruction memory  
+	parameter PCSTART = 128; //starting address of instruction memory
 	input clk;
 	input reset;
 	input IorD;
@@ -33,16 +55,16 @@ PCSource, ALUSrcB, ALUSrcA, RegWrite, RegDst, PCSel, ALUCtrl, Op, Zero, Function
 
     wire [31:0] MemData;
 
-	reg[15:0]mem[210:0];
+	reg[31:0]mem[255:0];
 
-	reg [15:0]Instruction;
+	reg [31:0]Instruction;
 
 	reg [31:0]mdr;
 
 	wire [31:0] da;//read data 1
 	wire [31:0] db;//read data 2
 
-	reg[15:0]registers[31:0];
+	reg[31:0]registers[31:0];
 
 	assign Function=Instruction[5:0];
 	assign Op=Instruction[31:26];
