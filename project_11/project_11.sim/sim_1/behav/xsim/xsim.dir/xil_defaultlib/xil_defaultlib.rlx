@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Rey Messon/Desktop/procesador_mips/project_11/project_11.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/Rey Messon/Desktop/procesador_mips/project_11/project_11.srcs/sim_1/new/tb_stateMachine.v,1596840338,verilog,,,,tb_stateMachine,,,,,,,,
+C:/Users/Rey Messon/Desktop/procesador_mips/project_11/project_11.srcs/sources_1/new/memory.v,1596837335,verilog,,C:/Users/Rey Messon/Desktop/procesador_mips/project_11/project_11.srcs/sources_1/new/stateMachine.v,,memory,,,,,,,,
+C:/Users/Rey Messon/Desktop/procesador_mips/project_11/project_11.srcs/sources_1/new/stateMachine.v,1596917760,verilog,,C:/Users/Rey Messon/Desktop/procesador_mips/project_11/project_11.srcs/sim_1/new/tb_stateMachine.v,,stateMachine,,,,,,,,
