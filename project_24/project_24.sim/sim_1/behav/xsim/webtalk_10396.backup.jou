@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Aug 10 21:41:47 2020
+# Process ID: 10396
+# Current directory: C:/Users/Rey Messon/Desktop/procesador_mips/project_24/project_24.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Rey Messon/Desktop/procesador_mips/project_24/project_24.sim/sim_1/behav/xsim/xsim.dir/TestBench_Lab1_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Rey Messon/Desktop/procesador_mips/project_24/project_24.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/Rey Messon/Desktop/procesador_mips/project_24/project_24.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Rey -notrace

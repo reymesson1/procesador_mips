@@ -1,0 +1,9 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+time	 clk reset enable counter
+0	 1   0     0      xxxxxxxxxxxxxxxx
+5	 1   1     0      xxxxxxxxxxxxxxxx
+15	 1   0     0      xxxxxxxxxxxxxxxx
+25	 1   0     1      xxxxxxxxxxxxxxxx
+125	 1   0     0      xxxxxxxxxxxxxxxx
+$finish called at time : 130 ns : File "C:/Users/Rey Messon/Desktop/procesador_mips/project_20/project_20.srcs/sim_1/new/tb_procesador.v" Line 49

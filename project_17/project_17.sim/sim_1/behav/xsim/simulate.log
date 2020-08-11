@@ -1,0 +1,43 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+time	 clk reset enable counter
+0	 1   0     0      xxxxxxxxxxxxxxxx
+5	 0   1     0      xxxxxxxxxxxxxxxx
+10	 1   1     0      xxxxxxxxxxxxxxxx
+11	 1   1     0      0000000000000000
+15	 0   0     0      0000000000000000
+20	 1   0     0      0000000000000000
+25	 0   0     1      0000000000000000
+30	 1   0     1      0000000000000000
+31	 1   0     1      0000000000000010
+35	 0   0     1      0000000000000010
+40	 1   0     1      0000000000000010
+default
+41	 1   0     1      0000000000000100
+45	 0   0     1      0000000000000100
+50	 1   0     1      0000000000000100
+default
+51	 1   0     1      xxxxxxxxxxxxxxxx
+55	 0   0     1      xxxxxxxxxxxxxxxx
+60	 1   0     1      xxxxxxxxxxxxxxxx
+default
+65	 0   0     1      xxxxxxxxxxxxxxxx
+70	 1   0     1      xxxxxxxxxxxxxxxx
+default
+75	 0   0     1      xxxxxxxxxxxxxxxx
+80	 1   0     1      xxxxxxxxxxxxxxxx
+default
+85	 0   0     1      xxxxxxxxxxxxxxxx
+90	 1   0     1      xxxxxxxxxxxxxxxx
+default
+95	 0   0     1      xxxxxxxxxxxxxxxx
+100	 1   0     1      xxxxxxxxxxxxxxxx
+default
+105	 0   0     1      xxxxxxxxxxxxxxxx
+110	 1   0     1      xxxxxxxxxxxxxxxx
+default
+115	 0   0     1      xxxxxxxxxxxxxxxx
+120	 1   0     1      xxxxxxxxxxxxxxxx
+default
+125	 0   0     0      xxxxxxxxxxxxxxxx
+$finish called at time : 130 ns : File "C:/Users/Rey Messon/Desktop/procesador_mips/project_17/project_17.srcs/sim_1/new/tb_procesador.v" Line 54
