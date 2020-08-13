@@ -30,7 +30,6 @@ set_property ip_output_repo {c:/Users/Rey Messon/Desktop/procesador_mips/project
 set_property ip_cache_permissions {read write} [current_project]
 read_mem {{C:/Users/Rey Messon/Desktop/memory_prueba_b.mem}}
 read_verilog -library xil_defaultlib {
-  {C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/Memory.v}
   {C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/stateMachine.v}
   {C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v}
 }

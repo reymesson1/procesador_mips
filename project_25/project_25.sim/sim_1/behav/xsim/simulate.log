@@ -1,0 +1,23 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+default
+1)write_enable=0;rd=data_out;address=0;2)rd=rs+rd;//addi RD
+albert           2           2 =           4
+alberto 0110 0010 0010
+default
+1)write_enable=0;rd=data_out;address=0;2)rd=rs+rd;//addi RD
+albert           1           0 =           1
+alberto 0110 0001 0000
+default
+1)write_enable=0;rs=data_out;address=0;2)rd=rs;//mov rd,rs
+default
+1)write_enable=0;rs=data_out;address=0;2)data_in=rs;address=1;//MOVM [M], RS
+default
+1)write_enable=0;rs=data_out;address=0;2)data_in=rs;address=1;//MOVM RS, [M]?
+default
+1)write_enable=0;rd=data_out;address=0;2)rd++;//INC RD
+default
+1)write_enable=0;rd=data_out;address=0;2)rd--;//DEC RD
+default
+default
+default

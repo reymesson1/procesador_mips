@@ -70,10 +70,10 @@ module tb_procesador();
             end;
                         
 
-//                #10 address = 64; write_enable = 1; data_in = sum;                        
+                #10 address = 64; write_enable = 1; data_in = sum;                        
         
-//            #10 a=0;   b=0;  c=0; d=0;
-//            #10;A = $urandom%20;B = $urandom%20;Sel = 4'b0110; 
+            #10 a=0;   b=0;  c=0; d=0;
+            #10;A = $urandom%20;B = $urandom%20;Sel = 4'b0110; 
 //            #10;A = 5;B = 5;Sel = y; 
 //            #10 a=0;   b=0;  c=0; d=1;
 //            #10;A = 4'b1101;B = 4'b1101 ;Sel = data_out; 

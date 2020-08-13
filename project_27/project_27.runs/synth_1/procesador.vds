@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Aug 11 19:49:29 2020
-# Process ID: 5644
+# Start of session at: Wed Aug 12 18:56:55 2020
+# Process ID: 11308
 # Current directory: C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.runs/synth_1
 # Command line: vivado.exe -log procesador.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source procesador.tcl
 # Log file: C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.runs/synth_1/procesador.vds
@@ -15,55 +15,40 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4572 
+INFO: Helper process launched with PID 7596 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 361.848 ; gain = 100.820
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 361.719 ; gain = 100.625
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'procesador' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:23]
 INFO: [Synth 8-6157] synthesizing module 'stateMachine' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/stateMachine.v:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/stateMachine.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'stateMachine' (1#1) [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/stateMachine.v:1]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:31]
-INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/Memory.v:1]
-INFO: [Synth 8-3876] $readmem data file 'memory_prueba_b.mem' is read successfully [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/Memory.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'Memory' (2#1) [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/Memory.v:1]
-WARNING: [Synth 8-689] width (4) of port connection 'a' does not match port width (2) of module 'Memory' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:31]
-WARNING: [Synth 8-689] width (4) of port connection 'b' does not match port width (2) of module 'Memory' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:31]
-WARNING: [Synth 8-689] width (4) of port connection 'c' does not match port width (2) of module 'Memory' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:31]
-WARNING: [Synth 8-689] width (4) of port connection 'd' does not match port width (2) of module 'Memory' [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:31]
-WARNING: [Synth 8-350] instance 'instance2' of module 'Memory' requires 10 connections, but only 4 given [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:31]
 WARNING: [Synth 8-3848] Net y in module/entity procesador does not have driver. [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:30]
-INFO: [Synth 8-6155] done synthesizing module 'procesador' (3#1) [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:23]
-WARNING: [Synth 8-3331] design Memory has unconnected port a[1]
-WARNING: [Synth 8-3331] design Memory has unconnected port b[1]
-WARNING: [Synth 8-3331] design Memory has unconnected port c[1]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[15]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[14]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[13]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[12]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[11]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[10]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[9]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[8]
-WARNING: [Synth 8-3331] design Memory has unconnected port address[7]
+INFO: [Synth 8-6155] done synthesizing module 'procesador' (2#1) [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/procesador.v:23]
+WARNING: [Synth 8-3331] design stateMachine has unconnected port Sel[3]
+WARNING: [Synth 8-3331] design stateMachine has unconnected port Sel[2]
+WARNING: [Synth 8-3331] design stateMachine has unconnected port Sel[1]
+WARNING: [Synth 8-3331] design stateMachine has unconnected port Sel[0]
 WARNING: [Synth 8-3331] design procesador has unconnected port Sel[3]
 WARNING: [Synth 8-3331] design procesador has unconnected port Sel[2]
+WARNING: [Synth 8-3331] design procesador has unconnected port Sel[1]
+WARNING: [Synth 8-3331] design procesador has unconnected port Sel[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.406 ; gain = 156.379
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.770 ; gain = 156.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.406 ; gain = 156.379
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.770 ; gain = 156.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.406 ; gain = 156.379
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.srcs/sources_1/new/stateMachine.v:11]
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.770 ; gain = 156.676
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 417.406 ; gain = 156.379
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.770 ; gain = 156.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -77,14 +62,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input      8 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 1     
-+---RAMs : 
-	               1K Bit         RAMs := 1     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      8 Bit       Adders := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -95,16 +73,7 @@ Hierarchical RTL Component report
 Module stateMachine 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input      8 Bit       Adders := 1     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module Memory 
-Detailed RTL Component Info : 
-+---Registers : 
-	               16 Bit    Registers := 1     
-+---RAMs : 
-	               1K Bit         RAMs := 1     
+	   2 Input      8 Bit       Adders := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -122,12 +91,12 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "instance1/" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 WARNING: [Synth 8-3331] design procesador has unconnected port Sel[3]
 WARNING: [Synth 8-3331] design procesador has unconnected port Sel[2]
-WARNING: [Synth 8-6014] Unused sequential element instance2/memory_reg was removed. 
+WARNING: [Synth 8-3331] design procesador has unconnected port Sel[1]
+WARNING: [Synth 8-3331] design procesador has unconnected port Sel[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,7 +109,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -152,7 +121,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -176,7 +145,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -189,7 +158,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -201,25 +170,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -236,7 +205,7 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |     2|
-|2     |LUT2   |     7|
+|2     |LUT2   |     8|
 |3     |IBUF   |    16|
 |4     |OBUF   |     8|
 +------+-------+------+
@@ -245,31 +214,31 @@ Report Instance Areas:
 +------+------------+-------------+------+
 |      |Instance    |Module       |Cells |
 +------+------------+-------------+------+
-|1     |top         |             |    33|
-|2     |  instance1 |stateMachine |     9|
+|1     |top         |             |    34|
+|2     |  instance1 |stateMachine |    10|
 +------+------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 547.371 ; gain = 286.344
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 534.863 ; gain = 273.770
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 653.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 645.820 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+14 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 653.828 ; gain = 400.652
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 653.828 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 645.820 ; gain = 396.129
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 645.820 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Rey Messon/Desktop/procesador_mips/project_27/project_27.runs/synth_1/procesador.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file procesador_utilization_synth.rpt -pb procesador_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 11 19:49:59 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 12 18:57:24 2020...

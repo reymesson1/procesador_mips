@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Aug 11 19:49:59 2020
+| Date         : Wed Aug 12 18:57:24 2020
 | Host         : DESKTOP-4CBHF69 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file procesador_utilization_synth.rpt -pb procesador_utilization_synth.pb
 | Design       : procesador
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |    7 |     0 |     41000 |  0.02 |
-|   LUT as Logic          |    7 |     0 |     41000 |  0.02 |
+| Slice LUTs*             |    8 |     0 |     41000 |  0.02 |
+|   LUT as Logic          |    8 |     0 |     41000 |  0.02 |
 |   LUT as Memory         |    0 |     0 |     13400 |  0.00 |
 | Slice Registers         |    0 |     0 |     82000 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |     82000 |  0.00 |
@@ -153,7 +153,7 @@ Table of Contents
 +----------+------+---------------------+
 | IBUF     |   16 |                  IO |
 | OBUF     |    8 |                  IO |
-| LUT2     |    7 |                 LUT |
+| LUT2     |    8 |                 LUT |
 | CARRY4   |    2 |          CarryLogic |
 +----------+------+---------------------+
 

@@ -28,6 +28,6 @@ module procesador(
     );
             
     stateMachine instance1 (.A(A), .B(B), .Sel(y), .Sum(Sum) );
-    Memory instance2 ( .a(Sel), .b(Sel), .c(Sel), .d(Sel) );    
+//    Memory instance2 ( .a(Sel), .b(Sel), .c(Sel), .d(Sel) );    
 
 endmodule

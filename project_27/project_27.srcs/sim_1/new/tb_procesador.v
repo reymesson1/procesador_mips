@@ -22,9 +22,9 @@
 
 module tb_procesador();
 
-    reg [7:0] A;
-    reg [7:0] B;
-    reg [1:0] Sel;
+    reg [15:0] A;
+    reg [15:0] B;
+    reg [3:0] Sel;
     wire [7:0] sum;
     
     reg [1:0] a;
@@ -43,8 +43,9 @@ module tb_procesador();
     procesador pro (.A(A), .B(B), .Sel(Sel), .Sum(sum));
      
     stateMachine state (.A(A), .B(B), .Sel(Sel), .Sum(sum)); 
+    
 
-    Memory mem(.a(a), .b(b), .c(c), .d(d), .y(y), .clk(clk),.address(address),.data_in(data_in),.data_out(data_out));
+    Memory mem(.data_out(data_out), .address(address), .data_in(data_in),.write_enable(write_enable),.clk(clk) );
     
     always begin
         #5 clk = ~clk;  
@@ -56,42 +57,78 @@ module tb_procesador();
     initial begin
     
         clk = 0;
+        j = 2;
+
+
+        #10 address = 3; write_enable<=0; $display("%b", data_out);
+        #10 address = 3; write_enable<=0; $display("%b", data_out);
+        #10 address = 59; write_enable <= 1; data_in = data_out[3:0];
+        #10 address = 60; write_enable <= 1; data_in = data_out[7:4];
+        #10 address = 61; write_enable <= 1; data_in = data_out[11:8];
+
+        for(i=0;i<65;i=i+1) begin
+        
+            #10 address = i; write_enable<=0; $display("%b", data_out);           
+        
+        end
+
+        
+//        #10 address = 3; write_enable<=0; $display("%b", data_out);
+//        #10 address = 3; write_enable<=0; $display("%b", data_out);
+//        #10 a=0;   b=0;  c=0; d=0;
+//        #10 a=0;   b=0;  c=0; d=0;
+//        #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//        #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+
+        //escribir en la posicion 60 A
+        //escribir en la posicion 60 B
+//        #10 address = 60; write_enable <= 1; data_in = data_out[7:4];
+//        #10 address = 60; write_enable <= 1; data_in = data_out[7:4];
+//        #10 address = 60; write_enable<=0; A=data_out; $display("%b", data_out);
+//        #10 address = 60; write_enable<=0; A=data_out; $display("%b", data_out);
+
+
         
 //        for (i = 0; i < 3; i = i + 1) begin
 
+//            #10 address = 0; write_enable<=0; $display("%b", data_out);
+//            #10 address = 1; write_enable<=0; $display("%b",data_out);
+//            #10 address = 2; write_enable<=0; $display("%b",data_out);
+//            #10 address = 3; write_enable<=0; $display("%b",data_out);
+
         
-            #10 a=0;   b=0;  c=0; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y; 
-            #10 a=0;   b=0;  c=0; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;
-            #10 a=0;   b=0;  c=1; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;
-            #10 a=0;   b=0;  c=1; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;
-            #10 a=0;   b=1;  c=0; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;        
-            #10 a=0;   b=1;  c=0; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;        
-            #10 a=0;   b=1;  c=1; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;                
-            #10 a=0;   b=1;  c=1; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;                
-            #10 a=1;   b=0;  c=0; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;                
-            #10 a=1;   b=0;  c=0; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;                
-            #10 a=1;   b=0;  c=1; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;                
-            #10 a=1;   b=0;  c=1; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;        
-            #10 a=1;   b=1;  c=0; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;        
-            #10 a=1;   b=1;  c=0; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;                
-            #10 a=1;   b=1;  c=1; d=0;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y;        
-            #10 a=1;   b=1;  c=1; d=1;
-            #10;A = $urandom%20;B = $urandom%20;Sel = y; 
+//            #10 a=0;   b=0;  c=0; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=0;  c=0; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=0;  c=1; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=0;  c=1; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=1;  c=0; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=1;  c=0; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=1;  c=1; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=0;   b=1;  c=1; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=0;  c=0; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=0;  c=0; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=0;  c=1; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=0;  c=1; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=1;  c=0; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=1;  c=0; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=1;  c=1; d=0;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
+//            #10 a=1;   b=1;  c=1; d=1;
+//            #10;A = $urandom%20;B = $urandom%20;Sel = data_out[3:0];
             
 //          end;       
         

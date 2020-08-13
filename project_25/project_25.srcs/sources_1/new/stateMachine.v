@@ -122,25 +122,5 @@ module stateMachine( //adder8bit
 //        Sum = A + B;
         $display("default");//stop RD
         
-//        case(data_out)
-//            2'b00 : $display("write_enable=0;rd=data_out;address=0;");//ldi
-//            2'b00 : $display("1)write_enable=0;rs=data_out;address=0;2)rd=rs");//mov rd,rs
-//            2'b00 : $display("1)write_enable=0;rs=data_out;address=0;2)data_in=rs;address=1;");//MOVM [M], RS 
-//            2'b00 : $display("1)write_enable=0;rs=data_out;address=0;2)data_in=rs;address=1;");//MOVM RS, [M]?
-//            *2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd++;");//INC RD
-//            *2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd--;");//DEC RD
-//            *2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd=rs+rd;");//addi RD
-//            (2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd=rs+rd;");//addi RD
-//            *2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd=rs-rd;");//sub RD
-//            2'b00 : $display("1)address=0++;");//jmp RD
-//            2'b00 : $display("1)address=0++;");//jz ?
-//            2'b00 : $display("1)address=0++;");//jnz ?
-//            2'b00 : $display("1)address=0++;");//jnz ?
-//            *2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd=rs and rd;");//and RD
-//            *2'b00 : $display("1)write_enable=0;rd=data_out;address=0;2)rd=rs or rd;");//or RD
-//            2'b00 : $display("1)write_enable=0;rd=data_out;address=length-1;");//stop RD
-//            default : $display("default");
-//        endcase
-
     
 endmodule
