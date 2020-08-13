@@ -47,8 +47,8 @@ reg [31:0] data_in;
         clk = 0;
         j = 2;
 
-         #10 address = 8; write_enable <= 0;$display("%b", data_out);
-         #10 address = 8; write_enable <= 0;$display("%b", data_out);
+         #10 address = 3; write_enable <= 0;$display("%b", data_out);
+         #10 address = 3; write_enable <= 0;$display("%b", data_out);
 
          temp = data_out;
          op = temp[3:0];
@@ -59,19 +59,24 @@ reg [31:0] data_in;
           
           4'b0000 : begin A = 5; $display("ldi"); end
           4'b0001 : begin A = B; $display("mov");$display(A);$display(B);  end
-          4'b0010 : begin #10 address = B; write_enable <= 1;$display("mov2");$display(A);$display(B); end //chequear manana
-          4'b0011 : begin $display("mov3"); end//chequear manana
+          4'b0010 : begin #10 address = 30; write_enable <= 1; data_in=B;$display("mov2");$display(A);$display(B); end //listo
+          4'b0011 : begin 
+                        #10 address = 35-1; write_enable <=1; data_in = 12;
+                        #10 address = 35-1; write_enable <=0; $display("%b", data_out ); B = data_out;
+                        #10 address = 35-1; write_enable <=0; $display("%b", data_out ); B = data_out;
+                        $display("mov3");  
+                    end//listo
           4'b0100 : begin B = B + 1; $display("inc"); end
           4'b0101 : begin A = A - 1; $display("dec"); end
           4'b0110 : begin B = B + 5; $display("adi"); end
           4'b0111 : begin A = A + B; $display("add"); end
-          4'b1000 : begin A = A - B; $display("sub"); end//chequear manana
-          4'b1001 : begin #10 address = A; write_enable <= 1; $display("jmp"); end//chequear manana
-          4'b1010 : begin #10 address = A; write_enable <= 1; $display("jz"); end//chequear manana
-          4'b1011 : begin #10 address = A; write_enable <= 1; $display("jnz"); end//chequear manana
+          4'b1000 : begin A = B - A ; $display("sub %d %d ", A,B); end//listo
+          4'b1001 : begin #10 address = 10; write_enable <= 1; $display("jmp"); end//listo
+          4'b1010 : begin #10 address = 9; write_enable <= 1; $display("jz"); end//list
+          4'b1011 : begin #10 address = 8; write_enable <= 1; $display("jnz"); end//listo
           4'b1100 : begin A = A & B; $display("and");end
           4'b1101 : begin A = A | B; $display("or");end
-         default: begin $display("halt"); end//chequear manana
+         default: begin $display("halt"); end//chequear mas tarde
         
         endcase
         
