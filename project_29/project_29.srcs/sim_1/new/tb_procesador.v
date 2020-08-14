@@ -35,7 +35,8 @@ wire [31:0] data_out;
 reg [31:0] address;
 reg [31:0] data_in;
 
-    procesador pro(.data_out(data_out), .address(address), .data_in(data_in),.write_enable(write_enable),.clk(clk) );
+//    procesador pro(.data_out(data_out), .address(address), .data_in(data_in),.write_enable(write_enable),.clk(clk) );
+    Memory mem(.data_out(data_out), .address(address), .data_in(data_in),.write_enable(write_enable),.clk(clk) );
 
     always begin
         #5 clk = ~clk;  
@@ -94,11 +95,11 @@ reg [31:0] data_in;
     
             for(i=0;i<A;i=i+1) begin
             
-            
                   $display("%d %d", A, B); 
                   Sum = Sum + B;
         
             end
+            
             #10 address = 203; write_enable<=1; data_in = Sum;
     
             $display(suma);
@@ -110,8 +111,7 @@ reg [31:0] data_in;
         //read
         for(i=0;i<300;i=i+1) begin
         
-            #10 address = i; write_enable <= 0;$display("%d %b", i, data_out);
-            
+            #10 address = i; write_enable <= 0;$display("%d %b", i, data_out);            
         
         end
 
