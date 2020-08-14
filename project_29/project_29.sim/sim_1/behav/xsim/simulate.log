@@ -1,14 +1,48 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+00000000000000000000000000000000
+ldi
+00000000000000000000000000000000
+00000000000000000010000001010001
+mov
+         2
+         2
+00000000000000000010000001010001
+00000000000000010100000001010010
+mov2
+         5
+        20
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+00000000000000010100000001010011
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+00000000000000000000000000001100
+mov3
+00000000000000000000000000001100
+00000000000000010100000001010100
+inc
+00000000000000010100000001010100
+00000000000000010100000001010101
+dec
+00000000000000010100000001010101
+00000000000000010100000001010110
+adi
+00000000000000010100000001010110
 00000000000000010100000001010111
-         5         20
-         5         20
-         5         20
-         5         20
-         5         20
-          0
-          0 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+add
+00000000000000010100000001010111
+00000000000000010100000001011000
+sub         15         20 
+00000000000000010100000001011000
+00000000000000010100000001011001
+jmp
+00000000000000010100000001011010
+00000000000000000000000000001100
+and
+00000000000000000000000000001100
+00000000000000010100000001011011
+jnz
+          0 00000000000000010100000001011000
           1 00000000000000000000000000000000
           2 00000000000000000010000001010001
           3 00000000000000010100000001010010
@@ -17,9 +51,9 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
           6 00000000000000010100000001010101
           7 00000000000000010100000001010110
           8 00000000000000010100000001010111
-          9 00000000000000010100000001011000
+          9 00000000000000000000000000001100
          10 00000000000000010100000001011001
-         11 00000000000000010100000001011010
+         11 00000000000000000000000000001100
          12 00000000000000010100000001011011
          13 00000000000000010100000001011100
          14 00000000000000010100000001011101
@@ -39,11 +73,11 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          28 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          29 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          30 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-         31 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+         31 00000000000000000000000000010100
          32 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          33 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          34 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-         35 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+         35 00000000000000000000000000001100
          36 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          37 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
          38 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -208,10 +242,10 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         197 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         198 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         199 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        200 00000000000000000000000000000101
-        201 00000000000000000000000000010100
+        200 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        201 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         202 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        203 00000000000000000000000001100100
+        203 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         204 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         205 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         206 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -258,21 +292,4 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         247 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         248 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         249 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        250 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        251 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        252 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        253 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        254 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        255 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        256 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        257 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        258 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        259 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        260 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        261 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        262 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        263 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        264 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        265 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        266 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        267 xxxxxxxxxxxxxxxxxxxxxxxxx
+        250 xxx

@@ -43,17 +43,21 @@ reg [31:0] data_in;
     end
 
     
-    integer i,j, suma;
+    integer i,j, suma, k;
         
     initial begin
     
         clk = 0;
-        j = 1;
+        reset = 0;
+        j = 0;
         suma = 0;
         Sum = 0;
 
-         #10 address = 7; write_enable <= 0;$display("%b", data_out);
-         #10 address = 7; write_enable <= 0;$display("%b", data_out);
+         for(k=0;k<12;k=k+1) begin
+
+
+         #10 address = k; write_enable <= 0;$display("%b", data_out);
+         #10 address = k; write_enable <= 0;$display("%b", data_out);
 
          temp = data_out;
          op = temp[3:0];
@@ -61,6 +65,7 @@ reg [31:0] data_in;
          B = temp[19:12];
          funct = "00000";
          
+
          if(j==0) begin
          
              case(op) 
@@ -84,7 +89,15 @@ reg [31:0] data_in;
               4'b1011 : begin #10 address = 8; write_enable <= 1; $display("jnz"); end//listo
               4'b1100 : begin A = A & B; $display("and");end
               4'b1101 : begin A = A | B; $display("or");end
-             default: begin $display("halt"); end//chequear mas tarde
+             default: begin 
+//                     for(i=0;i<300;i=i+1) begin : break
+                     for(i=0;i<300;i=i+1) begin : break
+                        $display("halt"); 
+                        if (reset==0) begin
+                            disable break;
+                        end
+                     end
+             end//chequear mas tarde
             
             endcase
         
@@ -106,7 +119,7 @@ reg [31:0] data_in;
             
             
         end//end if
-        
+        end;//end for
         
         //read
         for(i=0;i<300;i=i+1) begin
