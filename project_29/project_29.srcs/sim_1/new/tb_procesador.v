@@ -90,8 +90,8 @@ reg [31:0] data_in;
         
         end else begin
 
-            #10 address = 200; write_enable<=1; data_in = A;
-            #10 address = 201; write_enable<=1; data_in = B;
+            #10 address = 200-1; write_enable<=1; data_in = A;
+            #10 address = 201-1; write_enable<=1; data_in = B;
     
             for(i=0;i<A;i=i+1) begin
             
@@ -100,7 +100,7 @@ reg [31:0] data_in;
         
             end
             
-            #10 address = 203; write_enable<=1; data_in = Sum;
+            #10 address = 203-1; write_enable<=1; data_in = Sum;
     
             $display(suma);
             
