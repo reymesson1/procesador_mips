@@ -24,10 +24,12 @@ module tb_procesador();
 
 reg [31:0] A;
 reg [31:0] B;
+reg [31:0] Sum;
 reg [31:0] temp;
 reg [31:0] tempA;
 reg [31:0] tempB;
 reg [31:0] op;
+reg [31:0] funct;
 reg clk, write_enable,reset;
 wire [31:0] data_out;
 reg [31:0] address;
@@ -40,50 +42,76 @@ reg [31:0] data_in;
     end
 
     
-    integer i,j;
+    integer i,j, suma;
         
     initial begin
     
         clk = 0;
-        j = 2;
+        j = 1;
+        suma = 0;
+        Sum = 0;
 
-         #10 address = 3; write_enable <= 0;$display("%b", data_out);
-         #10 address = 3; write_enable <= 0;$display("%b", data_out);
+         #10 address = 7; write_enable <= 0;$display("%b", data_out);
+         #10 address = 7; write_enable <= 0;$display("%b", data_out);
 
          temp = data_out;
          op = temp[3:0];
          A = temp[11:4];
          B = temp[19:12];
+         funct = "00000";
          
-         case(op) 
-          
-          4'b0000 : begin A = 5; $display("ldi"); end
-          4'b0001 : begin A = B; $display("mov");$display(A);$display(B);  end
-          4'b0010 : begin #10 address = 30; write_enable <= 1; data_in=B;$display("mov2");$display(A);$display(B); end //listo
-          4'b0011 : begin 
-                        #10 address = 35-1; write_enable <=1; data_in = 12;
-                        #10 address = 35-1; write_enable <=0; $display("%b", data_out ); B = data_out;
-                        #10 address = 35-1; write_enable <=0; $display("%b", data_out ); B = data_out;
-                        $display("mov3");  
-                    end//listo
-          4'b0100 : begin B = B + 1; $display("inc"); end
-          4'b0101 : begin A = A - 1; $display("dec"); end
-          4'b0110 : begin B = B + 5; $display("adi"); end
-          4'b0111 : begin A = A + B; $display("add"); end
-          4'b1000 : begin A = B - A ; $display("sub %d %d ", A,B); end//listo
-          4'b1001 : begin #10 address = 10; write_enable <= 1; $display("jmp"); end//listo
-          4'b1010 : begin #10 address = 9; write_enable <= 1; $display("jz"); end//list
-          4'b1011 : begin #10 address = 8; write_enable <= 1; $display("jnz"); end//listo
-          4'b1100 : begin A = A & B; $display("and");end
-          4'b1101 : begin A = A | B; $display("or");end
-         default: begin $display("halt"); end//chequear mas tarde
+         if(j==0) begin
+         
+             case(op) 
+              
+              4'b0000 : begin A = 5; $display("ldi"); end
+              4'b0001 : begin A = B; $display("mov");$display(A);$display(B);  end
+              4'b0010 : begin #10 address = 30; write_enable <= 1; data_in=B;$display("mov2");$display(A);$display(B); end //listo
+              4'b0011 : begin 
+                            #10 address = 35-1; write_enable <=1; data_in = 12;
+                            #10 address = 35-1; write_enable <=0; $display("%b", data_out ); B = data_out;
+                            #10 address = 35-1; write_enable <=0; $display("%b", data_out ); B = data_out;
+                            $display("mov3");  
+                        end//listo
+              4'b0100 : begin B = B + 1; $display("inc"); end
+              4'b0101 : begin A = A - 1; $display("dec"); end
+              4'b0110 : begin B = B + 5; $display("adi"); end
+              4'b0111 : begin A = A + B; $display("add"); end
+              4'b1000 : begin A = B - A ; $display("sub %d %d ", A,B); end//listo
+              4'b1001 : begin #10 address = 10; write_enable <= 1; $display("jmp"); end//listo
+              4'b1010 : begin #10 address = 9; write_enable <= 1; $display("jz"); end//list
+              4'b1011 : begin #10 address = 8; write_enable <= 1; $display("jnz"); end//listo
+              4'b1100 : begin A = A & B; $display("and");end
+              4'b1101 : begin A = A | B; $display("or");end
+             default: begin $display("halt"); end//chequear mas tarde
+            
+            endcase
         
-        endcase
+        end else begin
+
+            #10 address = 200; write_enable<=1; data_in = A;
+            #10 address = 201; write_enable<=1; data_in = B;
+    
+            for(i=0;i<A;i=i+1) begin
+            
+            
+                  $display("%d %d", A, B); 
+                  Sum = Sum + B;
+        
+            end
+            #10 address = 203; write_enable<=1; data_in = Sum;
+    
+            $display(suma);
+            
+            
+        end//end if
+        
         
         //read
-        for(i=0;i<65;i=i+1) begin
+        for(i=0;i<300;i=i+1) begin
         
             #10 address = i; write_enable <= 0;$display("%d %b", i, data_out);
+            
         
         end
 

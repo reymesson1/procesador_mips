@@ -29,7 +29,7 @@ module procesador(
     );
 
 
-    reg [31:0] memory [0:65];
+    reg [31:0] memory [0:300];
     
     initial begin
     
